@@ -1,0 +1,15 @@
+<p>
+  Login
+</p>
+<form [formGroup]="loginForm">
+  <div class="form_wrap">
+    <label for="">Email</label>
+    <input type="email" name="" id="" formControlName="email">
+  </div>
+  <div class="form_wrap">
+    <label for="">Password</label>
+    <input type="password" name="" id="" formControlName="password">
+  </div>
+
+  <button type="button" (click)="login()">Login</button>
+</form>
