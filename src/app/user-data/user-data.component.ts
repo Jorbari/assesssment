@@ -13,10 +13,17 @@ export class UserDataComponent implements OnInit {
   constructor(private service: ListOfSiteService) { }
 
   ngOnInit(): void {
+
+    this.getSitesData();
   }
 
   getSitesData() {
-    // this.service.getListOfSites()
+    // Payload is supposed to be gotten from local-storage
+    this.service.getListOfSites('').subscribe(
+      success => {
+        this.listOfSitesData = success.message;
+      }
+    )
   }
 
 }

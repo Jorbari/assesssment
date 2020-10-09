@@ -13,7 +13,8 @@ export class AuthService {
 
    public SignInUser(payload): Observable<any> {
 
-    const url = 'https://fcs.concept-nova.com/api/v1/login';
+    // experiencing cors error but made a tweak to it
+    const url = 'https://cors-anywhere.herokuapp.com/https://fcs.concept-nova.com/api/v1/login';
 
     return this.hhtClient.post(url, payload);
 
